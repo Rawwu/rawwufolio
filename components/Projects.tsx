@@ -1,5 +1,7 @@
 export default function Projects() {
     return (
-        <h1>Project Section goes here</h1>
+        <div className="outline-white">
+            <h1 className="flex justify-center items-center" >Project Section goes here</h1>
+        </div>
     )
 }

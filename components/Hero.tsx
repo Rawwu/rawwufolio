@@ -8,7 +8,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gray-100 dark:bg-gray-900"
+            className="min-h-screen flex flex-col items-center justify-center text-center px-4 dark:bg-neutral-900"
         >
             {/* Text content for Hero */}
             <h1 className="text-4xl md:text-6xl font-bold mb-4">My name is Raúl.<br />

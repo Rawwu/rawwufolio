@@ -1,5 +1,5 @@
 export default function Navbar() {
     return (
-        <h1>Navbar goes here</h1>
+        <h1 className="flex justify-center items-center" >Navbar goes here</h1>
     )
 }
