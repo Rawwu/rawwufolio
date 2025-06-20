@@ -11,15 +11,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className= "bg-white text-black dark:bg-gray-900 dark:text-white"
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body
+            className= "bg-white text-black dark:bg-gray-900 dark:text-white scroll-smooth"
+            >
+                <section id="navbar">
+                    <Navbar />
+                </section>
+
+                {children}
+                
+                <section id="footer">
+                    <Footer />
+                </section>
+            </body>
+        </html>
+    );
 }
