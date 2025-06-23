@@ -19,7 +19,9 @@ export default function Hero() {
                 <div className="md:w-1/3 flex flex-col items-center justify-center">
                     {/* Right Column */}
                     <div className='mt-20 md:mt-66'>
-                        <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-gray-500 transition">Resume</button>
+                        <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-gray-500 transition">
+                            Resume
+                        </button>
                     </div>
                 </div>
             </div>
