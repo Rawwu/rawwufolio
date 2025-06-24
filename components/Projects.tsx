@@ -8,6 +8,8 @@ type Project = {
     type: string;
     tech: string;
     imageSrc: string;
+    github: string;
+    demo?: string;
 }
 /* Projects Array */
 const projects: Project[] = [
@@ -17,6 +19,7 @@ const projects: Project[] = [
         type: "Fullstack Web Application",
         tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
         imageSrc: "/sift-logo.jpg",
+        github: "https://github.com/Rawwu/Sift",
     },
     {
         title: "Off-Campus Housing",
@@ -24,13 +27,15 @@ const projects: Project[] = [
         type: "Fullstack Web Application",
         tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
         imageSrc: "/sift-logo.jpg",
+        github: "https://github.com/Rawwu/UNT-Off-Campus-Housing",
     },
     {
-        title: "El Cyber",
+        title: "Invoicer",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
         type: "Fullstack Web Application",
         tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
         imageSrc: "/sift-logo.jpg",
+        github: "https://github.com/Rawwu/Invoicer",
     },
     {
         title: "RL&Gc Landing Page",
@@ -38,28 +43,54 @@ const projects: Project[] = [
         type: "Fullstack Web Application",
         tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
         imageSrc: "/sift-logo.jpg",
+        github: "https://github.com/Rawwu/RL-GC",
     },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-      <div className="grid md:grid-cols-2 py-6 px-60 max-w-7xl mx-auto">
-        <Image
-          src={project.imageSrc}
-          alt={`${project.title} logo`}
-          width={300}
-          height={100}
-          className="rounded shadow"
-        />
-        <div className="flex flex-col gap-2">
-          <p className="text-sm text-gray-400">{project.type}</p>
-          <h2 className="text-xl font-bold text-white">{project.title}</h2>
-          <p className="text-base text-gray-300">{project.description}</p>
-          <p className="text-sm text-gray-400">{project.tech}</p>
+        <div className="grid md:grid-cols-2 py-6 px-60 max-w-7xl mx-auto">
+            <Image
+                src={project.imageSrc}
+                alt={`${project.title} logo`}
+                width={300}
+                height={100}
+                className="rounded shadow"
+            />
+            <div className="flex flex-col gap-2">
+                <p className="text-sm text-gray-400">{project.type}</p>
+                <h2 className="text-xl font-bold text-white">{project.title}</h2>
+                <p className="text-base text-gray-300">{project.description}</p>
+                <p className="text-sm text-gray-400">{project.tech}</p>
+                {/* GitHub Link */}
+                <div className="text-sm mt-2">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:underline"
+                    >
+                    GitHub
+                    </a>
+                    {/* Demo Link - Optional */}
+                    {project.demo && (
+                        <>
+                            {" "}|{" "}
+                            <a
+                                href={project.demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-blue-400 hover:underline"
+                            >
+                                Demo
+                            </a>
+                        </>
+                    )}
+                </div>
+            </div>
         </div>
-      </div>
     );
-  }
+}
   
 
 export default function Projects() {
