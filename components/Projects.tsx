@@ -49,7 +49,7 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <div className="grid md:grid-cols-2 py-6 px-60 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 py-6 px-60 max-w-7xl mx-auto">
             <Image
                 src={project.imageSrc}
                 alt={`${project.title} logo`}
@@ -100,7 +100,7 @@ export default function Projects() {
     return (
         <section className="dark:bg-neutral-900">
             {/* Heading */}
-            <h1 className="flex justify-center items-center text-lg md:text-4xl mb-16 pt-16 text-black dark:text-white " >
+            <h1 className="flex justify-center items-center text-lg md:text-4xl mb-16 pt-16 text-black dark:text-white" >
                 Featured Projects
             </h1>
             {/* Project card */}
@@ -108,7 +108,7 @@ export default function Projects() {
                 <ProjectCard key={index} project={project} />
             ))}
             <div className="flex justify-center mt-10 md:mt-10 pb-20">
-                <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-gray-500 transition"
+                <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-neutral-700 transition"
                     onClick={() => setShowAll(!showAll)}
                     >
                     {showAll ? "See Less" : "See More"}

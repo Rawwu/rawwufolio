@@ -1,5 +1,7 @@
 export default function Footer() {
     return (
-        <h1 className="flex justify-center items-center">Footer Section goes here</h1>
+        <footer className="text-center text-sm text-gray-400 pb-6 pt-30 dark:bg-neutral-900">
+                © 2025 Rawwu • All Rights Reserved
+        </footer>
     )
 }
