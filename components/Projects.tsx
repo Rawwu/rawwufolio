@@ -100,7 +100,7 @@ export default function Projects() {
     return (
         <section className="dark:bg-neutral-900">
             {/* Heading */}
-            <h1 className="flex justify-center items-center text-lg md:text-4xl mb-16 pt-16 text-black dark:text-white" >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl text-center mb-16 pt-16 text-black dark:text-white">
                 Featured Projects
             </h1>
             {/* Project card */}

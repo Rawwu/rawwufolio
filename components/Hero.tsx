@@ -19,9 +19,15 @@ export default function Hero() {
                 <div className="md:w-1/3 flex flex-col items-center justify-center">
                     {/* Right Column */}
                     <div className='mt-20 md:mt-66'>
-                        <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-neutral-700 transition">
+                        <a
+                            href="/Resume-Raul-Mtz.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 py-2 border border-white rounded-md bg-transparent text-white hover:bg-neutral-700 transition text-center"
+                        >
                             Resume
-                        </button>
+                        </a>
+
                     </div>
                 </div>
             </div>

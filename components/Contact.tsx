@@ -2,7 +2,9 @@ export default function Contact() {
     return (
         <section className="dark:bg-neutral-900 pt-40">
             {/* Heading */}
-            <h1 className="flex justify-center items-center text-lg md:text-4xl mb-16 pt-16 text-black dark:text-white">Let's Connect</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl text-center mb-16 pt-16 text-black dark:text-white">
+                Let's Connect
+            </h1>
             {/* Buttons */}
             <div className="flex flex-wrap justify-center gap-4 md:gap-x-8 md:pt-10 pb-20 px-6 md:px-20">
                 {/* Email */}
