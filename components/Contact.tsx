@@ -4,11 +4,11 @@ export default function Contact() {
             {/* Heading */}
             <h1 className="flex justify-center items-center text-lg md:text-4xl mb-16 pt-16 text-black dark:text-white">Let's Connect</h1>
             {/* Buttons */}
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-x-8 md:pt-10 pb-20 px-20 md:px-60">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-x-8 md:pt-10 pb-20 px-6 md:px-20">
                 {/* Email */}
                 <a
                     href="mailto:raulmtzjr7@gmail.com"
-                    className="text-center w-full md:w-1/4 px-8 py-2 border rounded-md text-white hover:bg-neutral-700 transition hover:cursor-pointer"
+                    className="text-center min-w-[140px] px-6 py-2 border rounded-md text-white hover:bg-neutral-700 transition"
                 >
                     Email Me
                 </a>
@@ -17,7 +17,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/in/raulmtzjr/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-center w-full md:w-1/4 px-8 py-2 border rounded-md text-white hover:bg-neutral-700 transition hover:cursor-pointer"
+                    className="text-center min-w-[140px] px-6 py-2 border rounded-md text-white hover:bg-neutral-700 transition"
                 >
                     LinkedIn
                 </a>
@@ -26,7 +26,7 @@ export default function Contact() {
                     href="https://github.com/Rawwu"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-center w-full md:w-1/4 px-8 py-2 border rounded-md text-white hover:bg-neutral-700 transition hover:cursor-pointer"
+                    className="text-center min-w-[140px] px-6 py-2 border rounded-md text-white hover:bg-neutral-700 transition"
                 >
                     GitHub
                 </a>
@@ -35,7 +35,7 @@ export default function Contact() {
                     href="https://elcyber.net/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-center w-full md:w-1/4 px-8 py-2 border rounded-md text-white hover:bg-neutral-700 transition hover:cursor-pointer"
+                    className="text-center min-w-[140px] px-6 py-2 border rounded-md text-white hover:bg-neutral-700 transition"
                 >
                     Blog
                 </a>

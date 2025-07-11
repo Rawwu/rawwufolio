@@ -49,15 +49,15 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <div className="grid md:grid-cols-2 gap-6 py-6 px-60 max-w-7xl mx-auto">
+        <div className="grid gap-6 py-6 px-4 sm:px-6 md:px-10 lg:px-20 max-w-7xl mx-auto md:grid-cols-2">
             <Image
                 src={project.imageSrc}
                 alt={`${project.title} logo`}
                 width={300}
                 height={100}
-                className="rounded shadow"
+                className="rounded shadow w-full max-w-[300px] h-auto mx-auto"
             />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
                 <p className="text-sm text-gray-400">{project.type}</p>
                 <h2 className="text-xl font-bold text-white">{project.title}</h2>
                 <p className="text-base text-gray-300">{project.description}</p>
@@ -107,6 +107,7 @@ export default function Projects() {
             {visibleProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
             ))}
+            {/* Button */}
             <div className="flex justify-center mt-10 md:mt-10 pb-20">
                 <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-neutral-700 transition"
                     onClick={() => setShowAll(!showAll)}
