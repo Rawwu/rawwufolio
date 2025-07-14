@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
-import React, {useState} from 'react'
+import React, { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
 type Project = {
     title: string;
@@ -48,73 +49,72 @@ const projects: Project[] = [
 ];
 
 function ProjectCard({ project }: { project: Project }) {
+    const ref = useRef(null)
+    // Trigger when close to viewport
+    const isInView = useInView(ref, { once: true, margin: "-130px" })
     return (
-        <div className="grid gap-6 py-6 px-4 sm:px-6 md:px-10 lg:px-20 max-w-7xl mx-auto md:grid-cols-2">
-            <Image
-                src={project.imageSrc}
-                alt={`${project.title} logo`}
-                width={300}
-                height={100}
-                className="rounded shadow w-full max-w-[300px] h-auto mx-auto"
-            />
-            <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
-                <p className="text-sm text-gray-400">{project.type}</p>
-                <h2 className="text-xl font-bold text-white">{project.title}</h2>
-                <p className="text-base text-gray-300">{project.description}</p>
-                <p className="text-sm text-gray-400">{project.tech}</p>
-                {/* GitHub Link */}
-                <div className="text-sm mt-2">
-                    <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-400 hover:underline"
-                    >
-                    GitHub
-                    </a>
-                    {/* Demo Link - Optional */}
-                    {project.demo && (
-                        <>
-                            {" "}|{" "}
-                            <a
-                                href={project.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm text-blue-400 hover:underline"
-                            >
-                                Demo
-                            </a>
-                        </>
-                    )}
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+            <div className="grid gap-6 py-6 px-4 sm:px-6 md:px-10 lg:px-20 max-w-7xl mx-auto md:grid-cols-2">
+                <Image
+                    src={project.imageSrc}
+                    alt={`${project.title} logo`}
+                    width={300}
+                    height={100}
+                    className="rounded shadow w-full max-w-[300px] h-auto mx-auto"
+                />
+                <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
+                    <p className="text-sm text-gray-400">{project.type}</p>
+                    <h2 className="text-xl font-bold text-white">{project.title}</h2>
+                    <p className="text-base text-gray-300">{project.description}</p>
+                    <p className="text-sm text-gray-400">{project.tech}</p>
+                    {/* GitHub Link */}
+                    <div className="text-sm mt-2">
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:underline"
+                        >
+                            GitHub
+                        </a>
+                        {/* Demo Link - Optional */}
+                        {project.demo && (
+                            <>
+                                {" "}|{" "}
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-blue-400 hover:underline"
+                                >
+                                    Demo
+                                </a>
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
   
 
 export default function Projects() {
-    const [showAll, setShowAll] = useState(false);
-    const visibleProjects = showAll ? projects : projects.slice(0, 2);
-    
     return (
         <section className="dark:bg-neutral-900">
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-center mb-16 pt-16 text-black dark:text-white">
                 Featured Projects
             </h1>
-            {/* Project card */}
-            {visibleProjects.map((project, index) => (
-                <ProjectCard key={index} project={project} />
+            {/* Project card map */}
+            {projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
             ))}
-            {/* Button */}
-            <div className="flex justify-center mt-10 md:mt-10 pb-20">
-                <button className="hover:cursor-pointer px-4 py-2 justify-center border-1 rounded-md bg-transparent text-white hover:bg-neutral-700 transition"
-                    onClick={() => setShowAll(!showAll)}
-                    >
-                    {showAll ? "See Less" : "See More"}
-                </button>
-            </div>
         </section>
     )
 }
