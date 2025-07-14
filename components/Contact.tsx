@@ -22,7 +22,7 @@ export default function Contact() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        Let's Connect
+        Let&apos;s Connect
       </motion.h1>
 
       {/* Buttons */}

@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Left Column - Animated Text */}
         <div className="md:w-2/3 text-center md:text-left space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight">
-            Hello, I'm Raúl.
+            Hello, I&apos;m Raúl.
             <br />
             <span className="text-blue-400 block whitespace-pre-line">
               {/* Typewriting animation */}
