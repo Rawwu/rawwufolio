@@ -5,7 +5,7 @@ import {
   motion,
   useInView,
 } from "framer-motion";
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export interface TimelineEntry {
   title: string;
@@ -38,12 +38,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return () => resizeObserver.disconnect();
   }, []);
 
-  // Create stable refs per entry
-  const entryRefs = useMemo(
-    () => data.map(() => React.createRef<HTMLDivElement>()),
-    [data.length]
-  );
-
   return (
     <div
       className="w-full bg-white dark:bg-neutral-900 font-sans md:px-10"
@@ -57,7 +51,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
       <div ref={heightRef} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => {
-          const inView = useInView(entryRefs[index], {
+          const ref = useRef<HTMLDivElement>(null);
+          const inView = useInView(ref, {
             once: true,
             margin: "0px 0px -100px 0px",
           });
@@ -65,7 +60,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           return (
             <motion.div
               key={index}
-              ref={entryRefs[index]}
+              ref={ref}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
