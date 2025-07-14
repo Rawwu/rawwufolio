@@ -53,17 +53,20 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 text-left">
           <div className="max-w-xs">
             <p className="text-white text-sm md:text-base">
-              {'{ 1 } '}<br /> Experienced in full-stack web development and project planning
+              {'{ 1 } '}<br /> 
+              Experienced in full-stack development with a focus on clean, scalable code and intuitive UI design.
             </p>
           </div>
           <div className="max-w-xs">
             <p className="text-white text-sm md:text-base">
-              {'{ 2 } '}<br /> I specialize in backend development
+              {'{ 2 } '}<br /> 
+              Specialized in backend systems — building secure APIs, managing databases, and optimizing performance.
             </p>
           </div>
           <div className="max-w-xs">
             <p className="text-white text-sm md:text-base">
-              {'{ 3 } '}<br /> Knowledgeable in cloud computing and architecture
+              {'{ 3 } '}<br /> 
+              Proficient in cloud architecture using AWS services like Lambda, DynamoDB, and Cognito for scalable deployment.
             </p>
           </div>
         </div>
