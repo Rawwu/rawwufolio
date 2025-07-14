@@ -6,11 +6,11 @@ export const journey: TimelineEntry[] = [
     content: (
       <div>
         <h4 className="text-lg md:text-xl font-semibold mb-1 text-blue-400">
-          Started CodePath’s TIP
+          Started CodePath&apos;s TIP
         </h4>
         <p className="text-base md:text-lg leading-relaxed text-neutral-300">
-        Currently enrolled in CodePath's Technical Interview Prep course — an in-depth program focused on data structures, algorithms, and whiteboard problem-solving.
-          I've been refining my ability to break down complex problems, write efficient code, and communicate my thought process under pressure.
+        Currently enrolled in CodePath&apos;s Technical Interview Prep course — an in-depth program focused on data structures, algorithms, and whiteboard problem-solving.
+          I&apos;ve been refining my ability to break down complex problems, write efficient code, and communicate my thought process under pressure.
         </p>
       </div>
     ),
