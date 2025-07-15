@@ -47,7 +47,7 @@ const projects: Project[] = [
         "A modern, responsive marketing site for Raul’s Lawn & Garden. Highlights services, testimonials, and a contact form to drive customer inquiries and improve brand visibility.",
       type: "Static Marketing Website",
       tech: "ReactJS • Tailwind CSS • Vercel",
-      imageSrc: "/RlnGc-Home.png",
+      imageSrc: "/RLnGc-Home.png",
       github: "https://github.com/Rawwu/RL-GC",
       demo: "https://rl-gc.vercel.app/",
     },
