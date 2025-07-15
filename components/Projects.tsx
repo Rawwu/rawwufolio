@@ -15,38 +15,43 @@ type Project = {
 /* Projects Array */
 const projects: Project[] = [
     {
-        title: "SIFT",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        type: "Fullstack Web Application",
-        tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
-        imageSrc: "/sift-logo.jpg",
-        github: "https://github.com/Rawwu/Sift",
+      title: "SIFT",
+      description:
+        "A machine learning-powered airline ticket price prediction app that helps users identify the best time to purchase tickets. Built as a senior project with a team, the app features data visualization and real-time predictions.",
+      type: "Fullstack Web Application",
+      tech: "ReactJS • NodeJS • Python • AWS: Lambda, API Gateway, DynamoDB • Scikit-learn",
+      imageSrc: "/sift-logo.jpg",
+      github: "https://github.com/Rawwu/Sift",
     },
     {
-        title: "Off-Campus Housing",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        type: "Fullstack Web Application",
-        tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
-        imageSrc: "/sift-logo.jpg",
-        github: "https://github.com/Rawwu/UNT-Off-Campus-Housing",
+      title: "Off-Campus Housing",
+      description:
+        "A listing platform built for UNT students to find, post, and manage off-campus housing options. Includes authentication, dynamic filtering, and a responsive layout.",
+      type: "Fullstack Web Application",
+      tech: "JavaScript • CSS • NodeJS • ExpressJS • AWS: CodePipeline, Elastic Beanstalk • MongoDB • Google Maps API",
+      imageSrc: "/UNT-OCH-Home.png",
+      github: "https://github.com/Rawwu/UNT-Off-Campus-Housing",
     },
     {
-        title: "Invoicer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        type: "Fullstack Web Application",
-        tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
-        imageSrc: "/sift-logo.jpg",
-        github: "https://github.com/Rawwu/Invoicer",
+      title: "Invoicer",
+      description:
+        "A job estimation and invoicing tool tailored for landscaping businesses. Allows admins to calculate labor, materials, and travel costs to generate itemized PDF invoices for clients.",
+      type: "Fullstack Web Application",
+      tech: "Streamlit • FastAPI • Python • SQLite3 • Pandas • Matplotlib",
+      imageSrc: "/Invoicer-Home.png",
+      github: "https://github.com/Rawwu/Invoicer",
     },
     {
-        title: "RL&Gc Landing Page",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-        type: "Fullstack Web Application",
-        tech: "ReactJS • NodeJS • Bootstrap • AWS: Cognito, Lambda, API Gateway • DynamoDB",
-        imageSrc: "/sift-logo.jpg",
-        github: "https://github.com/Rawwu/RL-GC",
+      title: "RL&Gc Landing Page",
+      description:
+        "A modern, responsive marketing site for Raul’s Lawn & Garden. Highlights services, testimonials, and a contact form to drive customer inquiries and improve brand visibility.",
+      type: "Static Marketing Website",
+      tech: "ReactJS • Tailwind CSS • Vercel",
+      imageSrc: "/RlnGc-Home.png",
+      github: "https://github.com/Rawwu/RL-GC",
+      demo: "https://rl-gc.vercel.app/",
     },
-];
+  ];  
 
 function ProjectCard({ project }: { project: Project }) {
     const ref = useRef(null)
