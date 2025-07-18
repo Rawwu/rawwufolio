@@ -17,9 +17,9 @@ const projects: Project[] = [
     {
       title: "SIFT",
       description:
-        "A machine learning-powered airline ticket price prediction app that helps users identify the best time to purchase tickets. Built as a senior project with a team, the app features data visualization and real-time predictions.",
+        "A flight booking platform that helps users find the best airfare while simplifying the booking process. It features real-time flight search and integrates a predictive model trained on historical pricing data to recommend the best times to book.",
       type: "Fullstack Web Application",
-      tech: "ReactJS • NodeJS • Python • AWS: Lambda, API Gateway, DynamoDB • Scikit-learn",
+      tech: "ReactJS • NodeJS • Python • AWS: Amplify, Cognito, Lambda, API Gateway, DynamoDB • Heroku • FastAPI • Stripe API • Amadeus API",
       imageSrc: "/sift-logo.jpg",
       github: "https://github.com/Rawwu/Sift",
     },
@@ -37,7 +37,7 @@ const projects: Project[] = [
       description:
         "A job estimation and invoicing tool tailored for landscaping businesses. Allows admins to calculate labor, materials, and travel costs to generate itemized PDF invoices for clients.",
       type: "Fullstack Web Application",
-      tech: "Streamlit • FastAPI • Python • SQLite3 • Pandas • Matplotlib",
+      tech: "Streamlit • FastAPI • Python • SQLite3 • Pandas • Matplotlib • REST APIs",
       imageSrc: "/Invoicer-Home.png",
       github: "https://github.com/Rawwu/Invoicer",
     },
@@ -46,7 +46,7 @@ const projects: Project[] = [
       description:
         "A modern, responsive marketing site for Raul’s Lawn & Garden. Highlights services, testimonials, and a contact form to drive customer inquiries and improve brand visibility.",
       type: "Static Marketing Website",
-      tech: "ReactJS • Tailwind CSS • Vercel",
+      tech: "NextJS • Tailwind CSS • Vercel",
       imageSrc: "/RLnGc-Home.png",
       github: "https://github.com/Rawwu/RL-GC",
       demo: "https://rl-gc.vercel.app/",
