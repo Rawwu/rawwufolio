@@ -29,7 +29,7 @@ const projects: Project[] = [
         "A listing platform built for UNT students to find, post, and manage off-campus housing options. Includes authentication, dynamic filtering, and a responsive layout.",
       type: "Fullstack Web Application",
       tech: "JavaScript • CSS • NodeJS • ExpressJS • AWS: CodePipeline, Elastic Beanstalk • MongoDB • Google Maps API",
-      imageSrc: "/UNT-OCH-Home.png",
+      imageSrc: "/OCH-laptop.png",
       github: "https://github.com/Rawwu/UNT-Off-Campus-Housing",
     },
     {
@@ -38,7 +38,7 @@ const projects: Project[] = [
         "A job estimation and invoicing tool tailored for landscaping businesses. Allows admins to calculate labor, materials, and travel costs to generate itemized PDF invoices for clients.",
       type: "Fullstack Web Application",
       tech: "Streamlit • FastAPI • Python • SQLite3 • Pandas • Matplotlib • REST APIs",
-      imageSrc: "/Invoicer-Home.png",
+      imageSrc: "/Invoicer-tablet.png",
       github: "https://github.com/Rawwu/Invoicer",
     },
     {
@@ -47,7 +47,7 @@ const projects: Project[] = [
         "A modern, responsive marketing site for Raul’s Lawn & Garden. Highlights services, testimonials, and a contact form to drive customer inquiries and improve brand visibility.",
       type: "Static Marketing Website",
       tech: "NextJS • Tailwind CSS • Vercel",
-      imageSrc: "/RLnGc-Home.png",
+      imageSrc: "/RLnG-desktop.png",
       github: "https://github.com/Rawwu/RL-GC",
       demo: "https://rl-gc.vercel.app/",
     },
